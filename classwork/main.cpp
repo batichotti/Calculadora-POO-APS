@@ -32,10 +32,13 @@ class Tecla {
 class Calculadora {
     Tela* tela;
     Cpu* cpu;
-    Teclado *teclado;
+    Teclado* teclado;
 };
 
 int main(){
     Tecla tecla1;
     tecla1.pressione();
+
+    Teclado teclado1;
+    teclado1.adicioneTecla(&tecla1);
 };
