@@ -16,7 +16,7 @@ class Teclado {
     Cpu* cpu;
     std::vector<Tecla*> teclas;
 
-    public: void adicioneTecla(Tecla* tecla){
+    public: void adicioneTecla(Tecla& tecla){
 
     }
 };
@@ -40,5 +40,5 @@ int main(){
     tecla1.pressione();
 
     Teclado teclado1;
-    teclado1.adicioneTecla(&tecla1);
+    teclado1.adicioneTecla(tecla1);
 };
