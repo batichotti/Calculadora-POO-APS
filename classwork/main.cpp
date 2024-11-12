@@ -19,10 +19,19 @@ class Teclado {
 
 class Tecla {
     Teclado teclado;
+
+    public: void pressione(){
+
+    }
 };
 
 class Calculadora {
     Tela tela;
     Cpu cpu;
     Teclado teclado;
+};
+
+int main(){
+    Tecla tecla1;
+    tecla1.pressione();
 };
