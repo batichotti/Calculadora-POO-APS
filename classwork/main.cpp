@@ -9,8 +9,8 @@ class Cpu {
 class Teclas{};
 
 class Teclado {
-    vector<Tecla> teclas;
     Cpu cpu;
+    std::vector<Tecla> teclas;
 };
 
 class Tecla {
