@@ -1,5 +1,6 @@
 class Calculadora {
 
+
 };
 
 class Tela {
@@ -7,7 +8,7 @@ class Tela {
 
 };
 
-class CPU {
+class Cpu {
 
 
 };
