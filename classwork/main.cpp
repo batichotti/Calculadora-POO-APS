@@ -1,9 +1,3 @@
-class Calculadora {
-    Tela tela;
-    Cpu cpu;
-    Teclado teclado;
-};
-
 class Tela {
 };
 
@@ -16,5 +10,11 @@ class Teclado {
 };
 
 class Tecla {
+    Teclado teclado;
+};
+
+class Calculadora {
+    Tela tela;
+    Cpu cpu;
     Teclado teclado;
 };
