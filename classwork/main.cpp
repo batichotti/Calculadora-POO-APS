@@ -9,20 +9,20 @@ class Tecla;
 class Tela {};
 
 class Cpu {
-    Tela tela;
+    Tela* tela;
 };
 
 class Teclado {
-    Cpu cpu;
-    std::vector<Tecla> teclas;
+    Cpu* cpu;
+    std::vector<Tecla*> teclas;
 
-    public: void adicioneTecla(Tecla tecla){
+    public: void adicioneTecla(Tecla* tecla){
 
     }
 };
 
 class Tecla {
-    Teclado teclado;
+    Teclado* teclado;
 
     public: void pressione(){
 
@@ -30,9 +30,9 @@ class Tecla {
 };
 
 class Calculadora {
-    Tela tela;
-    Cpu cpu;
-    Teclado teclado;
+    Tela* tela;
+    Cpu* cpu;
+    Teclado *teclado;
 };
 
 int main(){
