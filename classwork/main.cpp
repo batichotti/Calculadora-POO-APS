@@ -1,5 +1,4 @@
-class Tela {
-};
+class Tela {};
 
 class Cpu {
     Tela tela;
