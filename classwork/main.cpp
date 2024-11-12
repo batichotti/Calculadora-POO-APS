@@ -15,6 +15,10 @@ class Cpu {
 class Teclado {
     Cpu cpu;
     std::vector<Tecla> teclas;
+
+    public: void adicioneTecla(Tecla tecla){
+
+    }
 };
 
 class Tecla {
