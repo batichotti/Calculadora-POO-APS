@@ -14,10 +14,10 @@ class Cpu {
 
 class Teclado {
     Cpu* cpu;
-    std::vector<Tecla*> teclas;
+    std::vector<Tecla&> teclas;
 
     public: void adicioneTecla(Tecla& tecla){
-
+        teclas.push_back(tecla);
     }
 };
 
