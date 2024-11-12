@@ -1,10 +1,15 @@
+#include <vector>
+
 class Tela {};
 
 class Cpu {
     Tela tela;
 };
 
+class Teclas{};
+
 class Teclado {
+    vector<Tecla> teclas;
     Cpu cpu;
 };
 
