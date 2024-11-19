@@ -8,9 +8,14 @@ class Pessoa;
 /* Implementation */
 
 class Pessoa {
-    private: float peso;
+    private:
+        float peso;
 
     public:
+        Pessoa(float peso){
+            this->peso = peso;
+        }
+
         void setPeso(float value){
             if ( value > 0 && value <= 595 ){
                 this->peso = value;
@@ -24,9 +29,7 @@ class Pessoa {
 };
 
 int main(){
-
-    Pessoa p1;
-    p1.setPeso(100);
+    Pessoa p1(92);
 
     std::cout << "A pessoa p1 pesa " << p1.getPeso() << "kg." << std::endl;
 
