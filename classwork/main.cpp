@@ -1,11 +1,14 @@
+#include <iostream>
 #include <vector>
 
+/* Header */
 class Calculadora;
 class Tecla;
 class Cpu;
 class Teclado;
 class Tecla;
 
+/* Implementation */
 class Tela {};
 
 class Cpu {
@@ -23,7 +26,6 @@ class Teclado {
 
 class Tecla {
     Teclado* teclado;
-
     public: void pressione(){
 
     }
@@ -41,4 +43,7 @@ int main(){
 
     Teclado teclado1;
     teclado1.adicioneTecla(tecla1);
+
+    std::cout << "All it's okay!";
+    return 0;
 };
