@@ -13,7 +13,7 @@ class Pessoa {
 
     public:
         Pessoa(float peso){
-            this->peso = peso;
+            this->setPeso(peso);
         }
 
         void setPeso(float value){
