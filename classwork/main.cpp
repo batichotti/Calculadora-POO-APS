@@ -1,14 +1,20 @@
 #include <iostream>
 #include <vector>
 
-/* Header */
+/* Cabeçalho */
 class Calculadora;
 class Tecla;
-class Cpu;
+class Cpu; //Central de Processamento Unânime
 class Teclado;
 class Tecla;
 
-/* Implementation */
+enum Digito{ZERO, UM, DOIS, TRES, QUATRO, CINCO, SEIS, SETE, OITO, NOVE};
+
+enum Operação{SOMA, SUBTRACAO, MULTIPLICAO, DIVISAO, RAIZ_QUADRADA, PERCENTUAL};
+
+enum Controle{LIGA_LIMPA, DESLIGA, MRC, M_SOMA, M_SUBTRACAO, PONTO_FLUTUANTE, IGUAL};
+
+/* Implementação */
 class Tela {};
 
 class Cpu {
