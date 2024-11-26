@@ -10,12 +10,18 @@ class Tecla;
 
 enum Digito{ZERO, UM, DOIS, TRES, QUATRO, CINCO, SEIS, SETE, OITO, NOVE};
 
-enum Operação{SOMA, SUBTRACAO, MULTIPLICAO, DIVISAO, RAIZ_QUADRADA, PERCENTUAL};
+enum Operacao{SOMA, SUBTRACAO, MULTIPLICAO, DIVISAO, RADICIACAO, PORCENTAGEM};
 
-enum Controle{LIGA_LIMPA, DESLIGA, MRC, M_SOMA, M_SUBTRACAO, PONTO_FLUTUANTE, IGUAL};
+enum Controle{LIGA_LIMPA_ERRO, DESLIGA, MEMORIA_LEITURA_ESCRITA, MEMORIA_SOMA, MEMORIA_SUBTRACAO, IGUAL, SEPARADOR_DECIMAL};
 
 /* Implementação */
-class Tela {};
+class Tela { // Display de 7 segmentos e 8 digitos + multiplexação + GND + M/E = +-26 fios
+    
+    public:
+        void adicione(Digito digito){};
+        void adicione(Operacao operacao){};
+        void adicione(Controle controle){};
+};
 
 class Cpu {
     Tela* tela;
