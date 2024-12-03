@@ -4,7 +4,7 @@
 /* Cabeçalho */
 class Calculadora;
 class Tecla;
-class Cpu; //Central de Processamento Unânime
+class Cpu; //Central de Processamento Unitária
 class Teclado;
 class Tecla;
 
