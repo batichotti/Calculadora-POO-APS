@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+#include "calculadora.hpp"
 
 int main(){
     Tecla tecla1;
