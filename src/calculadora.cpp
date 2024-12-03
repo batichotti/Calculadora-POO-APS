@@ -43,44 +43,17 @@ void Tela::adicione(Digito digito)
     }
 };
 
-void limpe()
+void Tela::limpe()
 {
     std::cout << "\n\n\n\n\n";
 };
-;
 
-class Cpu
+void Teclado::adicioneTecla(Tecla &tecla)
 {
-    Tela *tela;
+    teclas.push_back(&tecla);
 };
 
-class Teclado
-{
-    Cpu *cpu;
-    std::vector<Tecla *> teclas;
-
-public:
-    void adicioneTecla(Tecla &tecla)
-    {
-        teclas.push_back(&tecla);
-    }
-};
-
-class Tecla
-{
-    Teclado *teclado;
-
-public:
-    void pressione()
-    {
-    }
-};
-
-class Calculadora
-{
-    Tela *tela;
-    Cpu *cpu;
-    Teclado *teclado;
+void Tecla::pressione() {
 };
 
 int main()
