@@ -23,8 +23,8 @@ class TeclaMateus: public Tecla {
 public:
   void pressione();
   
-  void definaTeclado(Teclado*) = 0;
-  Teclado* obtenhaTeclado() = 0;
+  void definaTeclado(Teclado*);
+  Teclado* obtenhaTeclado();
 };
 
 class CalculadoraMateus: public Calculadora {
@@ -32,14 +32,14 @@ class CalculadoraMateus: public Calculadora {
   Ucp *ucp;
   Teclado *teclado;
 public:
-  void definaTela(Tela*) = 0;
-  Tela* obtenhaTela()= 0;
+  void definaTela(Tela*);
+  Tela* obtenhaTela();
 
-  void definaUcp(Ucp*) = 0;
-  Ucp* obtenhaUcp()= 0;
+  void definaUcp(Ucp*);
+  Ucp* obtenhaUcp();
 
-  void definaTeclado(Teclado*) = 0;
-  Teclado* obtenhaTeclado() = 0;
+  void definaTeclado(Teclado*);
+  Teclado* obtenhaTeclado();
 };
 
 class TecladoMateus: public Teclado {
@@ -47,6 +47,6 @@ class TecladoMateus: public Teclado {
   std::vector<Tecla *> teclas;
 public:
   void adicioneTecla(Tecla &tecla);
-  virtual void definaUcp(Ucp*) = 0;
-  virtual Ucp* obtenhaUcp() = 0;
+  virtual void definaUcp(Ucp*);
+  virtual Ucp* obtenhaUcp();
 };

@@ -20,6 +20,6 @@ int main() {
   t1.definaSeparadorDecimal();
   t1.adicione(ZERO);
 
-  std::cout << "All it's okey!\n";
+  std::cout << "\nAll it's okey!\n";
   return 0;
 }

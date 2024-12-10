@@ -1,6 +1,5 @@
 #include "calculadoraMateus.hpp"
 
-/** Implementações */
 void TelaMateus::adicione(Digito digito){
   switch (digito){
   case ZERO:
@@ -47,7 +46,7 @@ void TelaMateus::definaSinal(Sinal sinal){
 }
 
 void TelaMateus::definaSeparadorDecimal(){
-  std::cout << "::\n";
+  std::cout << ".";
 }
 
 void UcpMateus::definaTela(Tela* tela){
@@ -59,6 +58,7 @@ Tela* UcpMateus::obtenhaTela(){
 }
 
 void TeclaMateus::pressione(){
+  std::cout << "";
 }
 
 void TeclaMateus::definaTeclado(Teclado* teclado){
