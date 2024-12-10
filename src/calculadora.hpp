@@ -1,44 +1,75 @@
 #include <iostream>
 #include <vector>
 
+/** Cabeçalho */
 class Calculadora;
 class Tecla;
-class Cpu; //Central de Processamento Unitária
+class Ucp;
 class Teclado;
 class Tecla;
 
-enum Digito{ZERO, UM, DOIS, TRES, QUATRO, CINCO, SEIS, SETE, OITO, NOVE};
+enum Digito { ZERO, UM, DOIS, TRES, QUATRO, CINCO, SEIS, SETE, OITO, NOVE };
 
-enum Operacao{SOMA, SUBTRACAO, MULTIPLICAO, DIVISAO, RADICIACAO, PORCENTAGEM};
+enum Operacao {
+  SOMA,
+  SUBTRACAO,
+  MULTIPLICACAO,
+  DIVISAO,
+  RADICIACAO,
+  PORCENTAGEM
+};
 
-enum Controle{LIGA_LIMPA_ERRO, DESLIGA, MEMORIA_LEITURA_ESCRITA, MEMORIA_SOMA, MEMORIA_SUBTRACAO, IGUAL, SEPARADOR_DECIMAL};
+enum Controle {
+  LIGA_LIMPA_ERRO,
+  DESLIGA,
+  MEMORIA_LEITURA_ESCRITA,
+  MEMORIA_SOMA,
+  MEMORIA_SUBTRACAO,
+  IGUAL,
+  SEPARADOR_DECIMAL
+};
+
+enum Sinal{POSITIVO, NEGATIVO};
 
 class Tela {
-    
-    public:
-        void adicione(Digito digito);
-        void limpe();
+public:
+  virtual void adicione(Digito) = 0;
+  virtual void limpe() = 0;
+  virtual void definaSinal(Sinal) = 0;
+  virtual void definaSeparadorDecimal() = 0;
 };
 
-class Cpu {
-    Tela* tela;
-};
-
-class Teclado {
-    Cpu* cpu;
-    std::vector<Tecla*> teclas;
-
-    public: void adicioneTecla(Tecla& tecla);
+class Ucp {
+public:
+  virtual void definaTela(Tela*) = 0;
+  virtual Tela* obtenhaTela() = 0;
 };
 
 class Tecla {
-    Teclado* teclado;
-    public:
-        void pressione();
+public:
+  virtual void pressione() = 0;
+
+  virtual void definaTeclado(Teclado*) = 0;
+  virtual Teclado* obtenhaTeclado() = 0;
 };
 
 class Calculadora {
-    Tela* tela;
-    Cpu* cpu;
-    Teclado* teclado;
+public:
+  virtual void definaTela(Tela*) = 0;
+  virtual Tela* obtenhaTela()= 0;
+
+  virtual void definaUcp(Ucp*) = 0;
+  virtual Ucp* obtenhaUcp()= 0;
+
+  virtual void definaTeclado(Teclado*) = 0;
+  virtual Teclado* obtenhaTeclado() = 0;
 };
+
+class Teclado {
+public:
+  virtual void adicioneTecla(Tecla &tecla) = 0;
+
+  virtual void definaUcp(Ucp*) = 0;
+  virtual Ucp* obtenhaUcp() = 0;
+};
+

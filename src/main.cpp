@@ -1,20 +1,25 @@
 #include <iostream>
 #include <vector>
 
-#include "calculadora.hpp"
+#include "calculadoraMateus.hpp"
 
-int main(){
-    Tecla tecla1;
-    tecla1.pressione();
+int main() {
 
-    Teclado teclado1;
-    teclado1.adicioneTecla(tecla1);
+  TeclaMateus tecla1;
+  tecla1.pressione();
 
-    Tela t1;
-    t1.adicione(ZERO);
-    t1.adicione(UM);
-    t1.limpe();
+  TecladoMateus teclado1;
+  teclado1.adicioneTecla(tecla1);
 
-    std::cout << "All it's okay!";
-    return 0;
-};
+  TelaMateus t1;
+  t1.adicione(ZERO);
+  t1.adicione(UM);
+  t1.limpe();
+  t1.definaSinal(NEGATIVO);
+  t1.adicione(UM);
+  t1.definaSeparadorDecimal();
+  t1.adicione(ZERO);
+
+  std::cout << "All it's okey!\n";
+  return 0;
+}
