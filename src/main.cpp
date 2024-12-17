@@ -1,7 +1,12 @@
 #include <iostream>
 #include <vector>
 
+#include "calculadora.hpp"
 #include "calculadoraMateus.hpp"
+#include "ucpMateus.hpp"
+#include "telaMateus.hpp"
+#include "teclaMateus.hpp"
+#include "tecladoMateus.hpp"
 
 int main() {
 
