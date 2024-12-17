@@ -38,7 +38,7 @@ void TelaMateus::adicione(Digito digito){
 }
 
 void TelaMateus::limpe() {
-  std::cout << "\n\n\n\n\n";
+  std::cout << "\033[2J\033[H";
 }
 
 void TelaMateus::definaSinal(Sinal sinal){
