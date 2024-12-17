@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 
-#ifndef CALCULADORA_HPP
-#define CALCULADORA_HPP
+#pragma once
 
 class Calculadora;
 class Tecla;
@@ -74,5 +73,3 @@ public:
   virtual void definaUcp(Ucp*) = 0;
   virtual Ucp* obtenhaUcp() = 0;
 };
-
-#endif
