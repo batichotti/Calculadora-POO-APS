@@ -30,5 +30,5 @@ The calculator is implemented entirely in **C++**, showcasing the use of core OO
 
 - **Language**: C++ (Standard 17 or higher recommended)
 - **Paradigm**: Object-Oriented Programming
-- **Compiler Requirements**: GCC, Clang, or MSVC
+- **Compiler Requirements**: G++, Clang, or MSVC
 - **Development Environment**: Any C++ IDE (e.g., Visual Studio, CLion) or text editor with build tools
